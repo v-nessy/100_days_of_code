@@ -1,0 +1,22 @@
+{
+  "name": "WAH",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page into Pitbull",
+  "permissions": ["activeTab", "scripting"],
+
+  "web_accessible_resources": [{
+  "resources": ["/images/walui.jpg"],
+  "matches": ["<all_urls>"]
+}],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }]
+}
