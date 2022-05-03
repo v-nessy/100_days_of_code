@@ -9,6 +9,8 @@ def draw():
   noFill()  
   constantFactor = 1.2 #changing constantFactor adjusts the spacing of the circles
   circleSize = 40 #changing circleSize adjusts the size of all the circles in the for loop
+  #^this is how I can grow/shrink the shapes
+  #doesn't matter
   
   for i in range(0,20):
     #draws 20 concentric circles of decreasing diameter and decreasing lineWeight
