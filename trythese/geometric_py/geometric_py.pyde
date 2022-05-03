@@ -13,11 +13,16 @@ def draw():
   #doesn't matter
   
   for i in range(0,20):
-    #draws 20 concentric circles of decreasing diameter and decreasing lineWeight
-    strokeWeight(circleSize/25.0) 
-    ellipse(width/2,height, circleSize, circleSize)
-    circleSize = circleSize * constantFactor 
-    
+      if i == 0: #relocate the smallest circle in the range
+        strokeWeight(circleSize/25.0)
+        ellipse(width/4,20, circleSize, circleSize)
+        circleSize = circleSize * constantFactor 
+      else:
+        #draws 20 concentric circles of decreasing diameter and decreasing lineWeight
+        strokeWeight(circleSize/25.0) 
+        ellipse(width/2,height, circleSize, circleSize)
+        circleSize = circleSize * constantFactor
+        
 
 
 
